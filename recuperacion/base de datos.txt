@@ -1,0 +1,23 @@
+﻿CREATE DATABASE VentasBoletosDB;
+
+USE VentasBoletosDB;
+
+CREATE TABLE Clientes (
+    ClienteId INT PRIMARY KEY IDENTITY,
+    Nombre NVARCHAR(100),
+    Edad INT,
+    Tipo NVARCHAR(100)
+);
+
+CREATE TABLE RutasTuristicas (
+    RutaId INT PRIMARY KEY IDENTITY,
+    Nombre NVARCHAR(100),
+    Precio DECIMAL(10, 2)
+);
+INSERT INTO Clientes (Nombre, Edad, Tipo) VALUES ('Cliente 1', 25, 'Promoción de colegios');
+INSERT INTO Clientes (Nombre, Edad, Tipo) VALUES ('Cliente 2', 70, 'Adultos mayores de 60 años');
+INSERT INTO Clientes (Nombre, Edad, Tipo) VALUES ('Cliente 3', 30, 'Adultos menores de 60 y jóvenes');
+
+INSERT INTO RutasTuristicas (Nombre, Precio) VALUES ('Sacsayhuaman - Puka Pukara - Tambomachay', 100);
+INSERT INTO RutasTuristicas (Nombre, Precio) VALUES ('Tipon - Lucre - Piquillaqta', 120);
+INSERT INTO RutasTuristicas (Nombre, Precio) VALUES ('Ollantaytambo - Machupicchu', 150);
